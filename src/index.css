@@ -64,3 +64,10 @@
     @apply bg-background text-foreground;
   }
 }
+
+body {
+  background-image:linear-gradient(rgba(255, 255, 255, 0.249), rgba(160, 160, 160, 0.253)), url('../src/assets/back.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

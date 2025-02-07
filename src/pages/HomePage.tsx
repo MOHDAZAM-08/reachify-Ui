@@ -19,13 +19,13 @@ export function HomePage() {
     const [activeSection, setActiveSection] = useState("home");
 
     return (
-        <div className="h-full bg-gray-100 flex flex-col">
+        <div className="h-full bg-transparent flex flex-col">
             {/* Top Navbar */}
             <Navbar />
 
             <div className="flex h-full overflow-hidden">
                 {/* Sidebar */}
-                <div className="sideNavbar w-1/5 sm:w-[15%] h-full p-5 flex flex-col gap-8 items-center bg-gray-100">
+                <div className="sideNavbar w-1/5 sm:w-[15%] h-full p-5 flex flex-col gap-8 items-center bg-transparent">
                     {/* Main Navigation */}
                     <div className="navWrapper w-14 rounded-full flex flex-col gap-6 items-center bg-blue-100 p-3">
                         {[{ icon: TbSmartHome, name: "home" },
@@ -104,10 +104,10 @@ export function HomePage() {
 
 
                         {/* Charts Section */}
-                        <div className="flex flex-col w-full h-full gap-4">
+                        <div className="flex flex-col sm:flex-row w-full h-full gap-4">
 
                             {/* Bar Chart */}
-                            <div className="flex flex-col w-full  sm:w-[60%] h-full object-contain  rounded-3xl  p-5 items-start justify-center gap-5">
+                            <div className="flex flex-col  w-full  sm:w-[60%] h-full object-contain  rounded-3xl  p-5 items-start justify-center gap-5">
 
                                 <div className="mb-3 switchbutton bg-blue-200 inline-flex items-center justify-center gap-1 rounded-3xl ">
                                     <div
