@@ -26,11 +26,7 @@ const chartData = [
 const chartConfig = {
   desktop: {
     label: "Desktop",
-    color: "hsl(var(--chart-1, 220, 90%, 55%))",
-  },
-  mobile: {
-    label: "Mobile",
-    color: "hsl(var(--chart-2, 340, 80%, 60%))",
+    color: "rgb(255, 150, 150)" // Softer red
   },
 }
 
@@ -45,7 +41,7 @@ export function BarChartComponent() {
         <ChartContainer config={chartConfig}>
           <ResponsiveContainer width="100%" height={300}>
             <BarChart data={chartData}>
-              <CartesianGrid vertical={false} strokeDasharray="3 3" />
+              <CartesianGrid vertical={false} strokeDasharray="3" />
               <XAxis
                 dataKey="month"
                 tickLine={false}
@@ -53,9 +49,8 @@ export function BarChartComponent() {
                 axisLine={false}
                 tickFormatter={(value) => value.slice(0, 3)}
               />
-              <Tooltip content={<ChartTooltipContent indicator="dashed" />} />
-              <Bar dataKey="desktop" fill={chartConfig.desktop.color} radius={4} />
-              <Bar dataKey="mobile" fill={chartConfig.mobile.color} radius={4} />
+              <Tooltip cursor={false} content={<ChartTooltipContent />} />
+              <Bar dataKey="desktop" fill={chartConfig.desktop.color} radius={4} activeBar={{ fill: "red", opacity: 1 }}/>
             </BarChart>
           </ResponsiveContainer>
         </ChartContainer>
